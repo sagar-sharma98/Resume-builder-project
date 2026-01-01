@@ -92,14 +92,6 @@ Copy code
 npm run dev
 Open the app in your browser (default: http://localhost:5173)
 
-Build for production
-
-bash
-Copy code
-npm run build
-Screenshots
-
-
 Deployment
 Example: https://resume-builder-project-sandy.vercel.app/
 
