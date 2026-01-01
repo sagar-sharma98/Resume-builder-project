@@ -1,16 +1,105 @@
-# React + Vite
+# Real-Time Resume Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **real-time Resume Builder** built with **React** and **Tailwind CSS**, featuring dynamic forms, live preview, and PDF export. The app is designed with **clean state management** and a polished **UI/UX** to provide a production-ready frontend experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## React Compiler
+- [Project Overview](#project-overview)  
+- [Features](#features)  
+- [Tech Stack](#tech-stack)  
+- [State Management](#state-management)  
+- [Setup Instructions](#setup-instructions)  
+- [Deployment](#deployment)  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Project Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project allows users to:
+
+- Enter personal details, experience, skills, and education.
+- See a **live preview** of the resume while typing.
+- Switch between **Classic** (serif, centered) and **Modern** (sidebar-based) layouts.
+- Export the resume as a **PDF**.
+- Manage dynamic experience entries and skill tags efficiently.
+
+The goal is to demonstrate **component-based design**, **state management using Context API**, and **frontend best practices**.
+
+---
+
+## Features
+
+### Core
+
+- Single Page Application (SPA) with **Control Panel** and **Live Preview**
+- Real-time updates as the user types
+- Dynamic **Experience** section (add/remove multiple entries)
+- Dynamic **Skills** section (press Enter to create removable skill tags)
+- Two resume layouts: **Classic** and **Modern**
+- Export resume as PDF using **jsPDF + html2canvas**
+- Field validation (Full Name is required before export)
+
+### Bonus (Implemented)
+
+- Save and restore data using **localStorage**
+- Dark mode for builder UI
+
+---
+
+## Tech Stack
+
+- **React** (functional components, hooks)
+- **Tailwind CSS** (utility-first styling)
+- **Context API** for state management
+- **jsPDF & html2canvas** for PDF export
+- **Vite** for fast development
+
+---
+
+## State Management
+
+The app uses **React Context API** to manage resume data globally:
+
+- `ResumeProvider` wraps the app
+- `useResume` custom hook provides:
+  - Personal details (`fullName`, `email`, `jobTitle`, `summary`)
+  - Experience entries
+  - Skills and education
+- Updates are reflected instantly in **Live Preview**
+
+This approach allows **scalable and clean state handling**, avoiding prop-drilling.
+
+---
+
+## Setup Instructions
+
+1. **Clone the repository**
+
+```bash
+git clone <your-repo-url>
+cd resume-assignment
+Install dependencies
+
+bash
+Copy code
+npm install
+Run the development server
+
+bash
+Copy code
+npm run dev
+Open the app in your browser (default: http://localhost:5173)
+
+Build for production
+
+bash
+Copy code
+npm run build
+Screenshots
+
+
+Deployment
+Example: https://resume-builder-project-sandy.vercel.app/
+
