@@ -78,7 +78,7 @@ This approach allows **scalable and clean state handling**, avoiding prop-drilli
 1. **Clone the repository**
 
 ```bash
-git clone <your-repo-url>
+git clone (https://github.com/sagar-sharma98/Resume-builder-project.git)
 cd resume-assignment
 Install dependencies
 
