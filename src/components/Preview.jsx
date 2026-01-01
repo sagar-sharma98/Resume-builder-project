@@ -1,6 +1,6 @@
-import { useResume } from "../context/ResumeContext";
-import Classic from "./layouts/Classic";
-import Modern from "./layouts/Modern";
+import { useResume } from "../context/resumeReducer";
+import Classic from "./layouts/ClassicView";
+import Modern from "./layouts/ModernView";
 
 export default function Preview() {
   const { state } = useResume();
