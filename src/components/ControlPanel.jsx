@@ -19,6 +19,7 @@ export default function ControlPanel() {
   const { isDark, toggleDarkMode } = useDarkMode();
   const [skillInput, setSkillInput] = useState("");
   const [emailError, setEmailError] = useState("");
+  const [nameInputTouched, setNameInputTouched] = useState(false);
 
   const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
@@ -83,14 +84,15 @@ export default function ControlPanel() {
               type="text"
               placeholder="Enter your name"
               className={`input ${
-                !state.personal.fullName.trim()
+                nameInputTouched && !state.personal.fullName.trim()
                   ? "border-red-300 dark:border-red-600 focus:ring-red-500"
                   : ""
               } transition-colors duration-300`}
               value={state.personal.fullName}
               onChange={(e) => updatePersonal("fullName", e.target.value)}
+              onBlur={() => setNameInputTouched(true)} // mark as touched on blur
             />
-            {!state.personal.fullName.trim() && (
+            {nameInputTouched && !state.personal?.fullName.trim() && (
               <p className="text-red-500 text-xs mt-1">Full Name is required</p>
             )}
           </div>
