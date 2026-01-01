@@ -1,4 +1,4 @@
-import { useResume } from "../context/resumeReducer";
+import { useResume } from "../context/resumeContext";
 import Classic from "./layouts/ClassicView";
 import Modern from "./layouts/ModernView";
 

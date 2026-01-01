@@ -1,6 +1,6 @@
 import ControlPanel from "./components/ControlPanel";
 import Preview from "./components/Preview";
-import { ResumeProvider } from "./context/resumeReducer";
+import { ResumeProvider } from "./context/resumeContext";
 import { DarkModeProvider } from "./context/DarkMode";
 
 export default function App() {

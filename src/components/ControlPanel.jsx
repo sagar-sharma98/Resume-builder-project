@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useResume } from "../context/resumeReducer";
+import { useResume } from "../context/resumeContext";
 import { useDarkMode } from "../context/DarkMode";
 import { exportPDF } from "../utils/exportPDF";
 import { FiDownload, FiX, FiMoon, FiSun } from "react-icons/fi";
